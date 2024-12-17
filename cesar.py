@@ -44,17 +44,16 @@ def viginere_cipher(message, password, reverse=False):
 
     for index, char in enumerate(message):
         current_key = list_of_keys[index % (len(list_of_keys))]
-        crypted_message += cesar_cipher(
-            char, current_key) if reverse else cesar_uncipher(char, current_key)
+        crypted_message += cesar_cipher(char, current_key) if reverse else cesar_uncipher(char, current_key)
     return crypted_message
 
-
-print(viginere_cipher("Evans", "MOT"))
-
-
-# crypted_message = cesar_cipher("Evans", 528)
-# print(crypted_message)
+if __name__ == "__main__":
+    print(viginere_cipher("Evans", "MOT"))
 
 
-# print(cesar_uncipher("'XCPU", 528))
-# force_brute_cesar("'XCPU")
+    # crypted_message = cesar_cipher("Evans", 528)
+    # print(crypted_message)
+
+
+    # print(cesar_uncipher("'XCPU", 528))
+    # force_brute_cesar("'XCPU")
