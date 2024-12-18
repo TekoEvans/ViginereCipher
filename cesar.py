@@ -38,17 +38,10 @@ def password_convertor_to_list_of_keys(password):
         return list_of_keys
 
 
-def viginere_cipher(message, password, reverse=False):
-    crypted_message = ""
-    list_of_keys = password_convertor_to_list_of_keys(password)
 
-    for index, char in enumerate(message):
-        current_key = list_of_keys[index % (len(list_of_keys))]
-        crypted_message += cesar_cipher(char, current_key) if reverse else cesar_uncipher(char, current_key)
-    return crypted_message
 
-if __name__ == "__main__":
-    print(viginere_cipher("Evans", "MOT"))
+# if __name__ == "__main__":
+    # print(viginere_cipher("Evans", "MOT"))
 
 
     # crypted_message = cesar_cipher("Evans", 528)
